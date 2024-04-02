@@ -31,6 +31,8 @@ class CarEx {
 
 }
 
+////////////////////////////////////////////////////
+
 class Car(
     var name: String,
     var model: String,
@@ -46,11 +48,31 @@ class Car(
     }
 }
 
-fun main() {
+fun mainEx1() {
     val tesla = Car("Tesla", "Model X", "Red", 4)
     val mustang = Car("Ford", "Mustang", "Grey", 4)
     tesla.move()
     tesla.stop()
     mustang.move()
     mustang.stop()
+}
+
+////////////////////////////////////////////////////
+fun main() {
+    val user1 = User("Harish", "Mangeshkar", 26)
+    val user2 = User("Arsene", "Mangeshkar", 26)
+
+
+}
+
+class User(name: String, var lastName: String, var age: Int) {
+    var name: String
+    init {
+        if (name.lowercase().startsWith("a")) {
+            this.name = name
+        } else {
+            this.name = "user"
+            println("Name doesn't start with letter 'A' or 'a' for $name")
+        }
+    }
 }
